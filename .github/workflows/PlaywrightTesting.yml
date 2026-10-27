@@ -9,6 +9,13 @@ on:
     branches:
         - main1
   workflow_dispatch: #Adding Parameter for Triggering CICD without code change-no pull or push
+    inputs:
+      markers:
+        description: "Add required marker"
+        required: true
+        default: "smoke"
+  schedule:
+    - cron: "* * * * *"
 
 jobs:
   tests:
