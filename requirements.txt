@@ -3,6 +3,6 @@ pytest
 pytest-playwright
 pytest-xdist
 pytest-order
-openxyl
+openpxyl
 python-dotenv
 allure-pytest
