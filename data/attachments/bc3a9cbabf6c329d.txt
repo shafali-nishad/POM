@@ -1,0 +1,3 @@
+trainingplaywright@gmail.com
+Playwright@123
+{'username': 'trainingplaywright@gmail.com', 'password': 'Playwright@123'}
