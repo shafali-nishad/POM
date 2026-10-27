@@ -25,6 +25,15 @@ jobs:
           pip install allure-pytest
       - name: Install Playwright Browsers
         run: playwright install
+      - name: Install Allure
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y unzip wget
+          wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.zip
+          unzip allure-2.27.0.zip 
+          sudo mv allure-2.27.0 /opt/allure
+          sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+          allure --version
       - name : Execution of tests
         run: pytest -n 3 allure-results --alluredir=allure-results --capture=tee-sys
       - name: Install Allure
