@@ -26,6 +26,8 @@ jobs:
     env:
       "username": ${{vars.USERNAME}}
       "password": ${{secrets.PASSWORD}}
+      "MARKERS": ${{inputs.markers}}
+      "BROWSERS": ${{github.event.inputs.browsers || 'chromium'}}
     steps:
       - name: Set up Python
         uses: actions/setup-python@v4
