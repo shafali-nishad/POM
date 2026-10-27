@@ -20,6 +20,9 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
+    env:
+      "username": ${{vars.USERNAME}}
+      "password": ${{secrets.PASSWORD}}
     steps:
       - name: Set up Python
         uses: actions/setup-python@v4
